@@ -1,0 +1,10 @@
+<div style="text-align: center; background-color: white; padding: 20px;">
+    <h2>Detalles del producto</h2>
+    <div>
+        <h3>{{ data.name }}</h3>
+        <h4>{{ data.price | currency }}</h4>
+        <p>{{ data.description }}</p>
+        <img width="100px" [src]="data.photo" />
+    </div>
+    <button (click)="onNoClick()">Cerrar</button>
+</div>
