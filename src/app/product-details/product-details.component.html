@@ -1,4 +1,4 @@
-<div style="text-align: center; background-color: white; padding: 20px;">
+<div *ngIf="data" style="text-align: center; background-color: white; padding: 20px;">
     <h2>Detalles del producto</h2>
     <div>
         <h3>{{ data.name }}</h3>
@@ -8,3 +8,14 @@
     </div>
     <button (click)="onNoClick()">Cerrar</button>
 </div>
+<!--
+<div *ngIf="product" style="text-align: center; background-color: white; padding: 20px;">
+    <h2>Detalles del producto</h2>
+    <div>
+        <h3>{{ product.name }}</h3>
+        <h4>{{ product.price | currency }}</h4>
+        <p>{{ product.description }}</p>
+        <img width="100px" [src]="product.photo" />
+    </div>
+    <button [routerLink]="['/']">Regresar</button>
+</div>-->
