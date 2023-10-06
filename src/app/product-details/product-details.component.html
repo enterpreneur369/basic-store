@@ -2,10 +2,11 @@
     <h2>Detalles del producto</h2>
     <div>
         <h3>{{ data.name }}</h3>
-        <h4>{{ data.price | currency }}</h4>
+        <h4>{{ data.price }}</h4>
         <p>{{ data.description }}</p>
         <img width="100px" [src]="data.photo" />
     </div>
+    <button type="button" (click)="addToCart(data)">Comprar</button>
     <button (click)="onNoClick()">Cerrar</button>
 </div>
 <!--

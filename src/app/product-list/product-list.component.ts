@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {MatDialog, MAT_DIALOG_DATA, MatDialogRef, MatDialogModule} from '@angular/material/dialog';
+import {MatDialog} from '@angular/material/dialog';
 import { Product, products } from '../products';
 import { ProductDetailsComponent } from '../product-details/product-details.component';
 
