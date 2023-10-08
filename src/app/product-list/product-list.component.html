@@ -1,32 +1,35 @@
 <h2>Products</h2>
-
-<div *ngFor="let product of products">
-    <h3>
-        <a [title]="product.name + ' details'">
-            {{ product.name }}
-        </a>
-    </h3>
-
-    <p>
-        Precio: {{ product.price | currency }}
-    </p>
-
-    <p *ngIf="product.description">
-        Descripcion: {{ product.description }}
-    </p>
-
-    <button (click)="share(product.name)">Compartir</button>
-
-    <app-product-alerts 
-        [product]="product" 
-        (notify)="onNotify()">
-    </app-product-alerts>
-
-    <button (click)="openDialog(product)">
-        Ver detalle
-    </button>
-    <!--
-    <button [routerLink]="['/products', product.id]">
-        Ver en otra página
-    </button>-->
+<div>
+    <mat-grid-list cols="3" *ngFor="let product of products">
+        <mat-grid-tile>
+            <h3>
+                <a [title]="product.name + ' details'">
+                    {{ product.name }}
+                </a>
+            </h3>
+        
+            <p>
+                Precio: {{ product.price | currency }}
+            </p>
+        
+            <p *ngIf="product.description">
+                Descripcion: {{ product.description }}
+            </p>
+        
+            <button (click)="share(product.name)">Compartir</button>
+        
+            <app-product-alerts 
+                [product]="product" 
+                (notify)="onNotify()">
+            </app-product-alerts>
+        
+            <button (click)="openDialog(product)">
+                Ver detalle
+            </button>
+            <!--
+            <button [routerLink]="['/products', product.id]">
+                Ver en otra página
+            </button>-->
+        </mat-grid-tile>    
+    </mat-grid-list>
 </div>

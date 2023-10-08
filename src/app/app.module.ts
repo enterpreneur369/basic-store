@@ -12,6 +12,8 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { CartComponent } from './cart/cart.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ShippingComponent } from './shipping/shipping.component';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatBadgeModule} from '@angular/material/badge';
 
 @NgModule({
   imports: [
@@ -19,10 +21,13 @@ import { ShippingComponent } from './shipping/shipping.component';
     BrowserModule,
     ReactiveFormsModule,
     MatDialogModule,
+    MatGridListModule,
+    MatBadgeModule,
     RouterModule.forRoot([
       { path: '', component: ProductListComponent },
       //{ path: 'products/:productId', component: ProductDetailsComponent },
       { path: 'cart', component: CartComponent },
+      {path: 'shipping', component: ShippingComponent}
     ])
   ],
   declarations: [

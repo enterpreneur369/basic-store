@@ -1,5 +1,10 @@
-<h3>Carrito de compras</h3>
+<h3 [matBadge]="items.length">Carrito de compras</h3>
+<p>
+    <a routerLink="/shipping">Costos de envío</a><br>
+    <a routerLink="/">Regresar a los productos</a>
+</p>
+
 <div class="cart-item" *ngFor="let item of items" >
-        <span> {{ item.name }} </span>
+    <span> {{ item.name }} </span>
     <span> {{item.price | currency }} </span>
 </div>
