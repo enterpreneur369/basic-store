@@ -15,5 +15,6 @@ export class CartComponent implements OnInit {
 
   limpiar() {
     this.cartService.clearCart();
+    this.items = this.cartService.getItems();
   }
 }
